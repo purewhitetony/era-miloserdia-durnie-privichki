@@ -397,18 +397,18 @@ strong { font-weight: 600; color: var(--ink); }
 .pager__link .icon { color: var(--coral); }
 
 /* ---------- главная ---------- */
-.hero { position: relative; overflow: hidden; display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); gap: 20px; align-items: center; padding: clamp(26px, 3.4vw, 48px); border-radius: var(--radius-lg); background: radial-gradient(70% 90% at 88% 108%, var(--coral-50) 0, rgba(254, 242, 241, 0) 70%), var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow); }
+.hero { position: relative; overflow: hidden; display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); gap: 20px; align-items: center; padding: clamp(26px, 3.4vw, 48px); border-radius: var(--radius-lg); background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow); }
 .hero__text { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: flex-start; gap: 20px; }
 .hero h1 { font-size: clamp(1.7rem, 1rem + 1.6vw, 2.45rem); }
 .hero .lead { max-width: 52ch; }
 .hero__founder { display: flex; align-items: center; gap: 12px; padding-top: 18px; border-top: 1px solid var(--line); font-size: .95rem; line-height: 1.5; color: var(--muted); }
 .hero__founder .icon { width: 42px; height: 23px; color: var(--saffron); stroke-width: 1.4; }
 .hero__art { position: relative; display: grid; place-items: center; min-height: 300px; }
-.hero__sun { position: relative; width: min(100%, 430px); }
-.hero__rings { position: absolute; left: 50.5%; bottom: 14%; width: 220%; max-width: none; height: auto; transform: translateX(-50%); fill: none; stroke: var(--coral-200); stroke-width: 1.3; pointer-events: none; -webkit-mask-image: radial-gradient(circle farthest-side at 50% 100%, #000 52%, transparent 99%); mask-image: radial-gradient(circle farthest-side at 50% 100%, #000 52%, transparent 99%); }
-.hero__rings circle { vector-effect: non-scaling-stroke; }
+/* знак занимает 74 % колонки: вместе с тремя добавленными кругами (1,37 ширины знака) он ровно в неё укладывается */
+.hero__sun { position: relative; width: 74%; margin-top: 6%; }
+.hero__rings { position: absolute; left: -19.4%; top: -26.52%; width: 140%; max-width: none; height: auto; pointer-events: none; }
 .hero__art picture { position: relative; display: block; }
-.hero__logo { position: relative; display: block; width: 100%; mix-blend-mode: multiply; }
+.hero__logo { position: relative; display: block; width: 100%; mix-blend-mode: darken; }
 
 .topic-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(218px, 1fr)); gap: 16px; }
 .topic-card { position: relative; display: flex; flex-direction: column; gap: 8px; padding: 22px 22px 20px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow); color: var(--text); text-decoration: none; transition: transform .2s, box-shadow .2s, border-color .2s; }
@@ -555,7 +555,7 @@ a.request:hover { border-color: var(--coral-200); box-shadow: var(--shadow); col
   .brand__mark { height: 40px; }
   .hero { grid-template-columns: minmax(0, 1fr); }
   .hero__art { order: 2; min-height: 0; padding-top: 8px; }
-  .hero__sun { width: min(74%, 300px); }
+  .hero__sun { width: min(62%, 250px); margin-top: 13%; }
   .cta { grid-template-columns: minmax(0, 1fr); }
   .page-head--art { --art: 190px; padding-right: clamp(26px, 4vw, 44px); min-height: 0; }
   .page-head__art { position: relative !important; right: auto; top: auto; transform: none; order: -1; align-self: center; margin: -6px 0 14px; }

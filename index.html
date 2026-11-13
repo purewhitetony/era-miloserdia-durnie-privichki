@@ -137,9 +137,15 @@
   </div>
   <div class="hero__art">
     <div class="hero__sun">
-      <!-- круги продолжают полукруги логотипа: тот же центр и тот же шаг (7,6 % ширины знака) -->
-      <svg class="hero__rings" viewBox="-1100 -1100 2200 1100" aria-hidden="true" focusable="false">
-        <circle r="550"/><circle r="626"/><circle r="702"/><circle r="778"/><circle r="854"/><circle r="930"/><circle r="1006"/><circle r="1082"/>
+      <!-- Три круга продолжают круги знака. Единицы: ширина знака = 1000.
+           Центр и радиусы сняты с самого логотипа: центр (506.2; 505.9) — выше «горизонта» (y = 630),
+           внешний круг знака R = 485, шаг ≈ 66. Низ рисунка обрезан по горизонту, как в знаке.
+           Белый круг под знаком чуть меньше его края: знак наложен в режиме darken, стыка не видно. -->
+      <svg class="hero__rings" viewBox="-194 -194 1400 824" aria-hidden="true" focusable="false">
+        <circle cx="506.2" cy="505.9" r="683" fill="#FFF9F8"/>
+        <circle cx="506.2" cy="505.9" r="617" fill="#FFF5F4"/>
+        <circle cx="506.2" cy="505.9" r="551" fill="#FEF0EF"/>
+        <circle cx="506.2" cy="505.9" r="478" fill="#FFFFFF"/>
       </svg>
       <picture>
         <source srcset="assets/img/logo.webp" type="image/webp">
